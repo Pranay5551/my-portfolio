@@ -3,10 +3,10 @@ function Hero() {
     <section id="hero" className="min-h-screen flex flex-col items-center justify-center text-center px-6">
       <p className="text-blue-400 font-medium mb-3 tracking-widest uppercase text-sm">Welcome to my portfolio</p>
       <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-        Hi, I'm <span className="text-blue-400">Alex Johnson</span>
+        Hi, I'm <span className="text-blue-400">Pranay Magar</span>
       </h1>
       <p className="text-xl text-gray-400 max-w-xl mb-8">
-        A passionate Frontend Developer who loves building beautiful, fast, and user-friendly web experiences.
+        An aspiring developer passionate about building full stack web applications and learning new technologies.
       </p>
       <div className="flex gap-4">
         <a href="#projects" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition">

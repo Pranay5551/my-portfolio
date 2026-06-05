@@ -3,35 +3,25 @@ const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio built with React and Tailwind CSS to showcase my work and skills.",
     tech: ["React", "Tailwind CSS", "Vite"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/Pranay5551/my-portfolio",
+    live: "https://my-portfolio-pranay5551.vercel.app",
   },
   {
-    title: "Weather App",
-    description: "A weather application that shows real-time weather data for any city using an API.",
-    tech: ["HTML", "CSS", "JavaScript", "API"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "Todo List App",
-    description: "A clean and minimal todo app with the ability to add, complete and delete tasks.",
-    tech: ["React", "JavaScript", "CSS"],
-    github: "#",
-    live: "#",
+    title: "Full Stack Task Manager",
+    description: "A full stack task management app with JWT authentication, protected routes and MongoDB database.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    github: "https://github.com/Pranay5551/task-manager-backend",
+    live: "https://task-manager-frontend-pranay5551.vercel.app",
   },
 ]
 
 function Projects() {
   return (
     <section id="projects" className="py-24 px-6 max-w-4xl mx-auto">
-
-      {/* Section Title */}
       <h2 className="text-3xl font-bold text-white mb-2">Projects</h2>
       <div className="w-16 h-1 bg-blue-400 mb-10"></div>
 
-      {/* Project Cards */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <div
             key={project.title}
@@ -49,13 +39,12 @@ function Projects() {
               </div>
             </div>
             <div className="flex gap-4">
-              <a href={project.github} className="text-gray-400 hover:text-white text-sm transition">GitHub →</a>
-              <a href={project.live} className="text-gray-400 hover:text-blue-400 text-sm transition">Live →</a>
+              <a href={project.github} target="_blank" className="text-gray-400 hover:text-white text-sm transition">GitHub →</a>
+              <a href={project.live} target="_blank" className="text-gray-400 hover:text-blue-400 text-sm transition">Live →</a>
             </div>
           </div>
         ))}
       </div>
-
     </section>
   )
 }
