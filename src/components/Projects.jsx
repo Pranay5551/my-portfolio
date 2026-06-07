@@ -13,6 +13,13 @@ const projects = [
     github: "https://github.com/Pranay5551/task-manager-backend",
     live: "https://task-manager-frontend-pranay5551.vercel.app",
   },
+  {
+    title: "Online Python Compiler",
+    description: "A browser-based Python compiler where users write and run Python code instantly with real-time output and error display.",
+    tech: ["React", "FastAPI", "Python", "Tailwind CSS", "Monaco Editor"],
+    github: "https://github.com/Pranay5551/python-compiler-frontend",
+    live: "https://python-compiler-frontend-sable.vercel.app",
+  },
 ]
 
 function Projects() {
