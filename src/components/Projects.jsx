@@ -20,6 +20,13 @@ const projects = [
     github: "https://github.com/Pranay5551/python-compiler-frontend",
     live: "https://python-compiler-frontend-sable.vercel.app",
   },
+  {
+    title: "FreelanceKit",
+    description: "A full stack freelancer tool to generate professional PDF invoices and contracts. Features JWT auth, dashboard with earnings charts, invoice preview, and currency converter.",
+    tech: ["React", "FastAPI", "PostgreSQL", "Python", "Tailwind CSS", "ReportLab"],
+    github: "https://github.com/Pranay5551/freelancer-tool",
+    live: "https://freelancer-tool.vercel.app",
+  }
 ]
 
 function Projects() {
