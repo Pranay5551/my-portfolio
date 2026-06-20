@@ -1,0 +1,110 @@
+#work {
+  min-height: 100vh;
+  padding: 6rem 6rem 6rem 5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: padding-left 0.3s ease;
+  gap: 2rem;
+}
+
+.project-row:last-child { border-bottom: 1px solid var(--border); }
+.project-row:hover { padding-left: 1rem; }
+.project-row:hover .project-arrow { opacity: 1; transform: translateX(4px); }
+
+.project-left { flex: 1; }
+
+.project-num {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.project-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.project-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  min-width: 160px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.project-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.project-arrow {
+  font-size: 1.2rem;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+@media (max-width: 768px) {
+  #work { padding: 4rem 1.5rem; min-height: auto; }
+  .project-row { flex-direction: column; align-items: flex-start; }
+  .project-right { align-items: flex-start; }
+}

@@ -1,1 +1,35 @@
-@import "tailwindcss";
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #EFE7DC;
+  --ink: #1A1604;
+  --muted: #8A7F70;
+  --accent: #B08A60;
+  --border: rgba(26,22,4,0.12);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.22s; }
+.fade-in-delay-3 { transition-delay: 0.34s; }
+.fade-in-delay-4 { transition-delay: 0.46s; }

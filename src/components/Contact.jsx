@@ -1,72 +1,33 @@
-import { useState } from 'react'
+import './Contact.css'
 
-function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+const links = [
+  { label: 'Email', value: 'pranaymagar0@gmail.com', url: 'mailto:pranaymagar0@gmail.com' },
+  { label: 'GitHub', value: 'github.com/Pranay5551', url: 'https://github.com/Pranay5551' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/pranay-magar', url: 'https://www.linkedin.com/in/pranay-magar' },
+  { label: 'Fiverr', value: 'fiverr.com/pranaymagar555', url: 'https://fiverr.com/pranaymagar555' },
+]
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    alert(`Thanks ${formData.name}! I'll get back to you soon.`)
-    setFormData({ name: '', email: '', message: '' })
-  }
-
+export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 max-w-2xl mx-auto">
-
-      {/* Section Title */}
-      <h2 className="text-3xl font-bold text-white mb-2">Contact Me</h2>
-      <div className="w-16 h-1 bg-blue-400 mb-10"></div>
-
-      <p className="text-gray-400 mb-8">
-        Have a project in mind or just want to say hi? Fill out the form below!
-      </p>
-
-      <div className="space-y-4">
-
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-400 transition"
-        />
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-400 transition"
-        />
-
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          rows="5"
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 px-4 py-3 rounded-lg focus:outline-none focus:border-blue-400 transition resize-none"
-        />
-
-        <button
-          onClick={handleSubmit}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition"
-        >
-          Send Message
-        </button>
-
+    <section id="contact">
+      <div className="contact-label fade-in"><span>Contact</span></div>
+      <div className="contact-body">
+        <h2 className="contact-headline fade-in fade-in-delay-1">
+          Let's build<br/>something <em>great</em><br/>together.
+        </h2>
+        <p className="contact-text fade-in fade-in-delay-2">
+          I'm open to internships, freelance projects, and full-time opportunities. Whether you have a project in mind or just want to say hello — my inbox is always open.
+        </p>
+        <div className="contact-links fade-in fade-in-delay-3">
+          {links.map(l => (
+            <a key={l.label} className="contact-link-row" href={l.url} target="_blank" rel="noopener noreferrer">
+              <span className="contact-link-label">{l.label}</span>
+              <span className="contact-link-value">{l.value}</span>
+              <span className="contact-link-arrow">↗</span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   )
 }
-
-export default Contact

@@ -1,0 +1,66 @@
+#contact {
+  min-height: 100vh;
+  padding: 6rem 6rem 6rem 5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 6rem;
+  justify-content: center;
+}
+
+.contact-label {
+  min-width: 140px;
+  padding-top: 0.4rem;
+}
+
+.contact-label span {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-body { max-width: 560px; }
+
+.contact-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.contact-headline em { font-style: italic; color: var(--accent); }
+
+.contact-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.contact-links { display: flex; flex-direction: column; }
+
+.contact-link-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--ink);
+  transition: padding-left 0.25s;
+}
+
+.contact-link-row:last-child { border-bottom: 1px solid var(--border); }
+.contact-link-row:hover { padding-left: 0.75rem; }
+
+.contact-link-label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.contact-link-value { font-size: 0.9rem; font-weight: 400; }
+.contact-link-arrow { color: var(--accent); font-size: 1rem; }
+
+@media (max-width: 768px) {
+  #contact { flex-direction: column; gap: 2rem; padding: 4rem 1.5rem; min-height: auto; }
+  .contact-label { min-width: auto; }
+}

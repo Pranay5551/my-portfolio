@@ -1,0 +1,63 @@
+#about {
+  min-height: 100vh;
+  padding: 6rem 6rem 6rem 5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 6rem;
+  justify-content: center;
+}
+
+.about-label {
+  min-width: 140px;
+  padding-top: 0.4rem;
+}
+
+.about-label span {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-body { max-width: 640px; }
+
+.about-intro {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.35;
+  margin-bottom: 2.5rem;
+}
+
+.about-intro em { font-style: italic; color: var(--accent); }
+
+.about-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  #about { flex-direction: column; gap: 2rem; padding: 4rem 1.5rem; min-height: auto; }
+  .about-label { min-width: auto; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
